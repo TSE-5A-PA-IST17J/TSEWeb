@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #929292;
+}
+
+/*Header lo demas*/
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #545454;
+    padding: 10px;
+    color: rgb(248, 248, 248);
+}
+
+.header-top img {
+    height: 100px;
+}
+
+.header-titles {
+    text-align: center;
+}
+
+.header-titles h1 {
+    margin: 0;
+}
+
+.header-titles h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+nav {
+    background: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding:10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.section {
+    padding: 20px;
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 30%;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    position: flex;
+    width: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    flex-shrink: 0;
+    display: none;
+    
+    
+}
+
+.carousel-image.active {
+    display: block;
+    
+   
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(103, 101, 145);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-nav.prev {
+    left: 10px;
+}
+
+.carousel-nav.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background: #000;
+}
+
+/* Estilos del Contacto */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background: #0044cc;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #003399;
+}
+
+/* Estilos del pie de página */
+footer {
+    background: #4e4e4e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* REDES SOCIALES PARA CONTACTAR*/
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-link {
+    margin: 0 10px;
+}
+
+.social-link img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-link img:hover {
+    transform: scale(1.1);
+}
+/*RESOLUCION*/
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-titles h1 {
+        font-size: 1.5em;
+    }
+
+    .header-titles h2 {
+        font-size: 1em;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+}
+
